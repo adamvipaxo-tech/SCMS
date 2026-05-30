@@ -1,19 +1,14 @@
 # Supply Chain Management System (SCMS)
 
-**SupplyNet Ltd** — Musanze District, Northern Province, Rwanda  
-National Practical Exam 2026
-
-> **Rename this folder** to `YourFirstName_YourLastName_National_Practical_Exam_2026` before submission.
+**SupplyNet Ltd** — Musanze District, Northern Province, Rwanda
 
 ## Project Structure
 
 ```
-FirstName_LastName_National_Practical_Exam_2026/
-├── docs/ERD.md              # Entity Relationship Diagram
-├── database/
-│   ├── schema.sql           # SCMS MySQL database
-│   └── seed.sql             # Sample data
+SCMS/
 ├── backend-project/         # Node.js + Express API
+│   ├── database/            # schema.sql, seed.sql
+│   └── docs/ERD.md          # Entity Relationship Diagram
 └── frontend-project/        # React.js + Tailwind CSS
 ```
 
@@ -21,8 +16,8 @@ FirstName_LastName_National_Practical_Exam_2026/
 
 | Requirement | Status |
 |-------------|--------|
-| ERD with PK/FK and cardinalities | `docs/ERD.md` |
-| MySQL database `SCMS` | `database/schema.sql` |
+| ERD with PK/FK and cardinalities | `backend-project/docs/ERD.md` |
+| MySQL database `SCMS` | `backend-project/database/schema.sql` |
 | Supplier: INSERT only | ✓ |
 | Shipment & Delivery: CRUD (insert/update/delete/retrieve) | ✓ |
 | User account (username/password) | ✓ JWT auth |
@@ -36,8 +31,8 @@ FirstName_LastName_National_Practical_Exam_2026/
 ### 1. Database (MySQL)
 
 ```bash
-mysql -u root -p < database/schema.sql
-mysql -u root -p < database/seed.sql
+mysql -u root -p < backend-project/database/schema.sql
+mysql -u root -p < backend-project/database/seed.sql
 ```
 
 ### 2. Backend
@@ -84,4 +79,4 @@ Sign in with an admin account created via the API or Profile page.
 - **Supplier** (1) → (*) **Shipment** via `supplierCode`
 - **Shipment** (1) → (*) **Delivery** via `shipmentNumber`
 
-Draw the formal ERD on paper, then replicate in draw.io / Lucidchart using `docs/ERD.md` as reference.
+See `backend-project/docs/ERD.md` for the full diagram and key definitions.
