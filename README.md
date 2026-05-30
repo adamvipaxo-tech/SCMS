@@ -62,11 +62,7 @@ npm run dev
 
 App runs at **http://localhost:5173**
 
-## Default Login
-
-| Username | Password |
-|----------|----------|
-| `officer` | `supplynet2026` |
+Sign in with an admin account created via the API or Profile page.
 
 ## API Endpoints
 
@@ -81,6 +77,7 @@ App runs at **http://localhost:5173**
 | GET | `/api/users` | List admin accounts |
 | POST | `/api/users` | Create admin account |
 | PUT | `/api/users/change-password` | Change own password |
+| DELETE | `/api/users/:id` | Delete admin (not yourself; at least one admin must remain) |
 
 ## ERD Summary
 
